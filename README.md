@@ -12,7 +12,7 @@ Aplicación React con autenticación JWT y Google OAuth.
 ## Instalación
 
 ```bash
-git clone <tu-repositorio>
+git clone https://github.com/Elizabeth-linda/frontend.git
 cd frontend
 npm install
 ```
