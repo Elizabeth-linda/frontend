@@ -1,16 +1,77 @@
-# React + Vite
+# Frontend - Desarrollo Web 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación React con autenticación JWT y Google OAuth.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 + Vite
+- React Router DOM
+- Axios
+- CSS3
 
-## React Compiler
+## Instalación
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+```bash
+git clone <tu-repositorio>
+cd frontend
+npm install
+```
 
-## Expanding the ESLint configuration
+## Configuración
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Crear archivo `.env`:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Para producción (`.env.production`):
+
+```env
+VITE_API_URL=https://tu-backend.onrender.com/api
+```
+
+## Ejecución
+
+```bash
+npm run dev
+```
+
+Aplicación en: `http://localhost:5173`
+
+## Estructura
+
+```
+src/
+├── components/       # Componentes reutilizables
+├── pages/           # Páginas (Login, Dashboard, etc.)
+├── services/        # Servicios API
+└── App.jsx          # Componente principal
+```
+
+## Funcionalidades
+
+- Registro de usuarios
+- Login tradicional (email/password)
+- Login con Google OAuth
+- Dashboard protegido
+- CRUD de usuarios
+- Gestión de sesiones con localStorage
+
+## Rutas
+
+- `/login` - Iniciar sesión
+- `/register` - Registro de usuario
+- `/auth/callback` - Callback de Google OAuth
+- `/dashboard` - Panel principal (protegido)
+- `/users` - Gestión de usuarios (protegido)
+
+## Despliegue en Vercel
+
+1. Conectar repositorio de GitHub
+2. Framework Preset: Vite
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+5. Environment Variables: `VITE_API_URL=https://tu-backend.onrender.com/api`
+6. Deploy
+
