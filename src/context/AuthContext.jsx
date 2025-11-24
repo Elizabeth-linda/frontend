@@ -70,7 +70,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const loginWithGoogle = () => {
-    window.location.href = 'http://localhost:5000/api/auth/google';
+    window.location.href = 'https://backend-9ivx.onrender.com/api/auth/google';
   };
 
   const logout = () => {
